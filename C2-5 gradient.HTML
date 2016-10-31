@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.div{
+			width: 100px;
+			height: 100px;
+			float: left;
+			margin-right: 20px;
+			margin-bottom: 20px;
+		}
+		.one{
+			background: linear-gradient(#fb3, #58a);
+		}
+		.two{
+			background: linear-gradient(#fb3 20%, #58a 80%);
+		}
+		.three{
+			background: linear-gradient(#fb3 50%, #58a 50%);
+		}
+		.four{
+			background: linear-gradient(#fb3 50%, #58a 50%);
+			background-size: 100% 30px;
+		}
+		.five{
+			background: linear-gradient(#fb3 30%, #58a 0);
+			background-size: 100% 30px;
+		}
+		.six{
+			background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66.6%, yellowgreen 0);
+			background-size: 100% 30px;
+		}
+		.seven{
+			background: linear-gradient(to right, #fb3 50%, #58a 0);
+			background-size: 30px 100%;
+		}
+		.eight{
+			background: linear-gradient(45deg, #fb3 50%, #58a 0);
+			background-size: 30px 30px;
+		}
+		.nine{
+			background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+			background-size: 30px 30px;
+		}
+		.ten{
+			background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+			background-size: 42.4px 42.4px;
+			/* 为了条纹宽度为15px，背景边长为 2 * 15 * 根号2 */
+		}
+		.eleven{
+			background: repeating-linear-gradient(60deg, #fb3, #58a 30px);
+		}
+		.twelve{
+			background: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+		}
+		.thirteen{
+			background: #58a;
+			background-image: repeating-linear-gradient(30deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1) 15px, transparent 0, transparent 30px);
+		}
+	</style>
+</head>
+<body>
+	<div style="width:360px;">
+		<div class="div one"></div>
+		<div class="div two"></div>
+		<div class="div three"></div>
+		<div class="div four"></div>
+		<div class="div five"></div>
+		<div class="div six"></div>
+		<div class="div seven"></div>
+		<div class="div eight"></div>
+		<div class="div nine"></div>
+		<div class="div ten"></div>
+		<div class="div eleven"></div>
+		<div class="div twelve"></div>
+		<div class="div thirteen"></div>
+	</div>
+</body>
+</html>

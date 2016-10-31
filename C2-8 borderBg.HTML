@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.something-meaningful{
+			background: url(06.jpg);
+			background-size: cover;
+			padding: 1em;
+		}
+		.something-meaningful > div{
+			background: white;
+			padding: 1em;
+		}
+		.border-image{
+			padding: 1em;
+			border: 1em solid transparent;
+			background: linear-gradient(white, white), url(06.jpg);
+			background-size: cover;
+			background-clip: padding-box, border-box;
+			background-origin: border-box;
+		}
+		.border-image2{
+			padding: 1em;
+			border: 1em solid transparent;
+			background: linear-gradient(white, white) padding-box, 
+			            url(06.jpg) border-box 0 / cover;
+		}
+		.letter{
+			padding: 1em;
+			border: 1em solid transparent;
+			background: linear-gradient(white, white) padding-box,
+						repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 0, transparent 25%, #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0 / 5em 5em;
+		}
+		.footnote{
+			border-top: .2em solid transparent;
+			border-image: 100% 0 0 linear-gradient(90deg, currentColor 4em, transparent 0);
+			padding-top: 1em;
+		}
+		@keyframes ants { to { background-position: 100% } }
+		.marching-ants{
+			padding: 1em;
+			border: 1px solid transparent;
+			background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 /.6em .6em;
+			animation: ants 12s linear infinite;
+		}
+	</style>
+</head>
+<body>
+	<div class="something-meaningful">
+		<div>
+			I HAVE A NICE STONE ART BORDER, <br>
+			DON'T I LOOK PRETTY?
+		</div>
+	</div>
+	<br><br>
+	<div class="border-image">
+		I HAVE A NICE STONE ART BORDER, <br>
+		DON'T I LOOK PRETTY?
+	</div>
+	<br><br>
+	<div class="border-image2">
+		I HAVE A NICE STONE ART BORDER, <br>
+		DON'T I LOOK PRETTY?
+	</div>
+	<br><br>
+	<div class="letter">
+		MY BORDER IS REMINISCENT OF <br>
+		VINTAGE ENVELOPES,HOW <br>
+		COOL IS THAT?
+	</div>
+	<br><br>
+	<div class="footnote">
+		THIS IS A FOOTNOTE.
+	</div>
+	<br><br>
+	<div class="marching-ants">
+		333333333333
+	</div>
+</body>
+</html>
