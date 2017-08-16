@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/less">
+		@wide: 1px;
+
+		.wbbf{
+			background: hsl(210, 13%, 60%);
+			color: hsl(210, 13%, 30%);
+			font-size: 2em;
+		}
+		.bbwf{
+			background: hsl(210, 13%, 40%);
+			color: hsl(210, 13%, 75%);
+			font-size: 2em;
+		}
+		.print1{
+			text-shadow: 0 1px 1px hsla(0,0%,100%,.8);
+		}
+		.print2{
+			text-shadow: 0 -1px 1px black;
+		}
+		.hollow{
+			width: 200px;
+			height: 100px;
+			font-size: 5em;
+			text-align: center;
+			background: deeppink;
+			color: white;
+		}
+		.hollow1{
+			text-shadow: @wide @wide black, -@wide @wide black, @wide -@wide black, -@wide -@wide black;
+		}
+		.hollow2{
+			text-shadow: 0 0 @wide black, 0 0 @wide black, 0 0 @wide black, 0 0 @wide black, 0 0 @wide black, 0 0 @wide black;
+		}
+		h1{
+			width: 200px;
+			text-align: center;
+			font: 500%/1 Rockwell, serif;
+			background: deeppink;
+			color: white;
+		}
+		h1 text{
+			fill: currentColor;
+		}
+		h1 svg{ overflow: visible; }
+		h1 use{
+			stroke: black;
+			stroke-width: 6;
+			stroke-linejoin: round; 
+		}
+		.common{
+			width: 200px;
+			height: 100px;
+			font-size: 4em;
+			text-align: center;
+		}
+		.clow{
+			.common;
+			background: #203;
+			color: #ffc;
+			transition: 1s;
+		}
+		.clow:hover{
+			/*color: transparent;*/
+			text-shadow: 0 0 .1em, 0 0 .3em;
+			/*filter: blur(.1em);*/
+		}
+		.raised{
+			.common;
+			background: #58a;
+			color: white;
+			text-shadow: 0 1px hsl(0,0%,85%),
+						 0 2px hsl(0,0%,80%),
+						 0 3px hsl(0,0%,75%),
+						 0 4px hsl(0,0%,70%),
+						 0 5px hsl(0,0%,55%),
+						 0 5px 10px black;
+
+		}
+		.retro{
+			.common;
+			font-weight: bold;
+			color: white;
+			background: hsl(0,50%,45%);
+			text-shadow: 1px 1px black, 2px 2px black,
+						 3px 3px black, 4px 4px black,
+						 5px 5px black, 6px 6px black,
+						 7px 7px black, 8px 8px black;
+		}
+	</style>
+	<script src="less.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="wbbf">"The only way to gid of a temptation is to yield to it"</div>
+	<br>
+	<div class="wbbf print1">"The only way to gid of a temptation is to yield to it"</div>
+	<br>
+	<div class="bbwf">"The only way to gid of a temptation is to yield to it"</div>
+	<br>
+	<div class="bbwf print2">"The only way to gid of a temptation is to yield to it"</div>
+	<br>
+	<div class="hollow hollow1">CSS</div>
+	<br>
+	<h1><svg width="2em" height="1.2em">
+		<use xlink:href="#css" />
+		<text id="css" y="1em">CSS</text>
+	</svg></h1>
+	<br>
+	<a class="clow">Clow</a>
+	<br>
+	<div class="raised">CSS3d</div>
+	<br>
+	<div class="retro">RETRO</div>
+</body>
+</html>

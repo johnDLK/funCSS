@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<style>
+		.myCircular path, .circular path{
+			fill: none;
+		}
+		.myCircular, .circular{
+			width: 30em;
+			height: 30em;
+			margin: 3em auto 0;
+			padding-top: 2em;
+		}
+		.myCircular svg, .circular svg{
+			display: block;
+			overflow: visible;
+		}
+	</style>
+</head>
+<body>
+	<div class="circular">
+		<svg viewBox="0 0 100 100">
+			<path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
+			<text>
+				<textPath xlink:href="#circle">
+					circular reasoning works because
+				</textPath>
+			</text>
+		</svg>
+	</div>
+
+	<div class="myCircular">
+		circular reasoning works because
+	</div>
+
+	<script>
+		$('.myCircular').each(function(index, el){
+			var NS = "http://www.w3.org/2000/svg";
+			var xlinkNS = "http://www.w3.org/1999/xlink";
+			var svg = document.createElementNS(NS, 'svg');
+			var circle = document.createElementNS(NS, 'path');
+			var text = document.createElementNS(NS, 'text');
+			var textPath = document.createElementNS(NS, 'textPath');
+			svg.setAttribute('viewBox', '0 0 100 100');
+
+			circle.setAttribute('d', 'M 0,50 a 50,50 0 1,1 0,1 z');
+			circle.setAttribute('id', 'circle');
+
+			textPath.textContent = el.textContent;
+			textPath.setAttributeNS(xlinkNS, 'xlink:href', '#circle');
+
+			text.appendChild(textPath);
+			svg.appendChild(circle);
+			svg.appendChild(text);
+			el.textContent = '';
+			console.log(el)
+			el.appendChild(svg);
+		});
+	</script>
+</body>
+</html>

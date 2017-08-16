@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		main{
+			transition: .6s;
+		}
+		main.de-emphasized{
+			filter: blur(5px);
+			/*filter: blur(5px) contrast(.8) brightness(.8);*/
+		}
+		dialog{
+			position: fixed;
+		    top: 50%;
+		    z-index: 1;
+		    box-shadow: 0 .2em .5em rgba(0,0,0,.5), 0 0 0 100vmax rgba(0,0,0,.2);
+		}
+	</style>
+</head>
+<body>
+<div>
+	<dialog>
+		O HAI, I'm a dialog. Click on me to dismiss.
+	</dialog>
+	<main>
+	<button id="btn">toggle button</button>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	<p>为什么我还能选择</p>
+	Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...Bacon Ipsum dolor sit amet...</main>
+	</div>
+
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<script>
+		var flag = true;
+		$('#btn').click(function(){
+			if(flag){
+				flag = false;
+				$('main').addClass('de-emphasized');
+				$('dialog').show();
+			}
+		});
+		$('dialog').click(function(){
+			if(!flag){
+				flag = true;
+				$('main').removeClass('de-emphasized');
+				$('dialog').hide();
+			}
+		});
+	</script>
+</body>
+</html>

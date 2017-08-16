@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			width: 600px;
+			height: 600px;
+			background: url("cat.jpg") 0 / cover fixed;
+		}
+		main{
+			position: relative;
+			top: 100px;
+			left: 100px;
+			width: 400px;
+			height: 400px;
+			background: hsla(0,0%,100%,.3);
+			overflow: hidden;
+		}
+		blockquote{
+			padding: 50px 20px;
+		}
+		main::before{
+			background: url("cat.jpg") 0 / cover fixed;
+			content: '';
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			filter: blur(20px);
+			margin: -30px;
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<blockquote>
+			“The only way to get rid of a temptation
+			 blablablablablablabla blablablablablablablabla blablablablablablabla blablablablablablabla blablablablablablabla blablablablablablablabla blablablablablablablabla”
+			<footer>——
+				<cite>
+					Oscar Wilde,
+					The Picture of Dorian Gray
+				</cite>
+			</footer>
+		</blockquote>
+	</main>
+</body>
+</html>
