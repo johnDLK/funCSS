@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			height: 100px;
+			width: 100px;
+			background-color: orange;
+			border-radius: 50px;
+		}
+		@keyframes bounce {
+			60%, 80%, to { 
+				transform: translateY(400px);
+				animation-timing-function: ease-out;
+			}
+			70% { transform: translateY(300px); }
+			90% { transform: translateY(360px); }
+		}
+		.ball{
+			animation: bounce 3s ease-in;
+		}
+	</style>
+</head>
+<body>
+	<div class="ball"></div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.callout{
+		    background-color: lemonchiffon;
+		    padding: 10px;
+		    max-width: 200px;
+		    position: absolute;
+		    left: 120px;
+		    top: 40px;
+		    border: 1px solid #aaa;
+		    border-radius: 6px;
+		    font-size: 12px;
+		}
+		.callout::before{
+			content: '';
+		    position: absolute;
+		    top: -20px;
+		    border: 10px solid;
+			border-color: transparent transparent lemonchiffon transparent;
+		    z-index: 2;
+		}
+		.callout::after{
+			content: '';
+		    position: absolute;
+		    top: -21px;
+		    left: 10px;
+		    border: 10px solid;
+			border-color: transparent transparent #aaa transparent;
+			z-index: 1;
+		}
+
+
+		input:not(:focus) + .callout {
+			transform: scale(0);
+			/*transition-timing-function: ease;*/
+			transition: .25s transform;
+		}
+		.callout{
+			transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
+			transform-origin: 1.4em -.4em;
+		}
+	</style>
+</head>
+<body>
+	<label>
+		Your username: <input id="username" />
+		<span class="callout">Only letters, numbers,
+		 underscores (_) and hyphens (-) allowed!</span>
+	</label>
+</body>
+</html>

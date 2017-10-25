@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.path {
+			position: relative;
+			width: 300px; height: 300px;
+			border-radius: 50%;
+			background: orange;
+		}
+		.avatar {
+    		position: absolute;
+			width: 50px; height: 50px;
+			border-radius: 50%;
+			left: 125px;
+    		padding-top: 10px;
+		}
+		@keyframes spin {
+			to { transform: rotate(1turn); }
+		}
+		.avatar {
+			animation: spin 3s infinite linear;
+			transform-origin: 50% 150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="path">
+		<img src="cat.jpg" class="avatar" />
+	</div>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.path {
+			position: relative;
+			width: 300px; height: 300px;
+			border-radius: 50%;
+			background: orange;
+		}
+		.avatar {
+    		position: absolute;
+			left: 125px;
+    		padding-top: 10px;
+		}
+		.avatar > img {
+			width: 50px; height: 50px;
+			border-radius: 50%;
+		}
+		@keyframes spin {
+			to { transform: rotate(1turn); }
+		}
+		.avatar {
+			animation: spin 3s infinite linear;
+			transform-origin: 50% 150px;
+		}
+		.avatar > img {
+			animation: inherit;
+			animation-direction: reverse;
+		}
+	</style>
+</head>
+<body>
+	<div class="path">
+		<div class="avatar">
+			<img src="cat.jpg" />
+		</div>
+	</div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.path {
+			position: relative;
+			width: 300px; height: 300px;
+			border-radius: 50%;
+			background: orange;
+		}
+		.avatar {
+    		position: absolute;
+			width: 50px; height: 50px;
+			border-radius: 50%;
+			left: 125px;
+			top: 125px;
+		}
+		@keyframes span {
+			from {
+				transform: 	rotate(0turn)
+							translateY(-150px) translateY(50%)
+							rotate(1turn);
+			}
+			to {
+				transform: 	rotate(1turn)
+							translateY(-150px) translateY(50%)
+							rotate(0turn);
+			}
+		}
+		.avatar {
+			animation: span 3s infinite linear;
+		}
+	</style>
+</head>
+<body>
+	<div class="path">
+		<img src="cat.jpg" class="avatar" />
+	</div>
+</body>
+</html>
